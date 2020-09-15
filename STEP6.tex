@@ -1,0 +1,111 @@
+Human capital
+
+\begin{enumerate}[label=(\alph*)]
+
+\item 
+Suppose that potential log earnings for a worker with s years of schooling are given by
+
+\begin{equation}
+\begin{aligned}
+g_i(s) = \alpha + \rho_1s-\rho_2s^2
+\end{aligned}
+\end{equation}
+
+and that potential schooling values $[S_{0i}, S_{1i}]$  indexed against a Bernoulli instrument, $Z_i$, determine
+actual schooling according to
+
+\begin{equation}
+\begin{aligned}
+S_i = S_{0i} + (S_{1i}-S_{0i})Z_i
+\end{aligned}
+\end{equation}
+
+We need to show that the Wald estimand using $Z_i$ to instrument $S_i$ equals the average derivative $\EX[w_ig'_i(S_i^*)]$
+
+First , the independence assumption is \{$g_i(s), S_{1i}, S_{0i}$\} $\bot Z$ , and the monotonicity assumption is $S_{1i} \geq S_{0i}$. This means the instrument is independent of what an individual could earn with schooling level S, and independent of the random elements in the first stage. Therefore the Wald estimator can be written 
+
+\begin{equation}
+\begin{aligned}
+\frac{\EX[g_i(S_i)|Z_i = 1] - \EX[g_i(S_i)|Z_i = 0]}
+{\EX[S_i|Z_i = 1] - \EX[S_i|Z_i = 0]} = 
+\frac{\EX[g_i(S_{1i})-g_i(S_{0i})]}
+{\EX[S_{1i} - S_{0i}]}
+\end{aligned}
+\end{equation}
+
+Assuming that $\omega_i \equiv \frac{S_{1i} - S_{0i}}{\EX[S_{1i} - S_{0i}]}$
+we can rewrite the wald stimator 
+
+\begin{equation}
+\begin{aligned}
+\EX[\omega_i\frac{g_i(S_{1i})-g_i(S_{0i})}{S_{1i} - S_{0i}} ]
+\end{aligned}
+\end{equation}
+
+This is a weighted average arc-slope of $g_i(S)$ on the interval $[S_{0i}, S_{1i}]$. We can simplify further using the mean value theorem where $g_i(S_{1i}) = g_i(S_{0i}) + g'_i(S_i^{*})(S_{1i} - S_{1i})$ for $S_i^{*}$ in the interval $[S_{0i}, S_{1i}]$. Therefore, we can rewrite the wald stimator as an average derivative 
+
+\begin{equation}
+\begin{aligned}
+\frac{\EX[g_i(S_{1i})-g_i(S_{0i})]}
+{\EX[S_{1i} - S_{0i}]} = 
+\frac{\EX[(S_{1i} - S_{0i})g'_i(S_i^{*})]}
+{\EX[S_{1i} - S_{0i}]} =
+\EX[\omega_i g'_i(S_i^{*})]
+\end{aligned}
+\end{equation}
+
+Given the monotonicity assumption , $\omega_i$ is positive for everyone.So the Wald estimator is a  weighted average of individual-specific slopes at a point in the interval $[S_{0i}, S_{1i}]$.
+
+Now given the equation (34) let´s find the Wald estimator using the last equation , $g'_i(S_i) = \rho_1 + 2\rho_2S_i$ and $S_i^{*} = \frac{S_{1i} - S_{0i}}{2}$. 
+
+\begin{equation}
+\begin{aligned}
+& g'_i(S_i^{*}) = \rho_1 + \rho_2(S_{1i} - S_{0i}) \\
+& \EX[\omega_i\frac{g_i(S_{1i})-g_i(S_{0i})}{S_{1i} - S_{0i}} ] = 
+\frac{\EX[(S_{1i} - S_{0i})(\rho_1 + \rho_2(S_{1i} - S_{0i}))}
+{\EX[S_{1i} - S_{0i}]}
+\end{aligned}
+\end{equation}
+
+Now using the normal expression of the Wald estimator 
+
+\begin{equation}
+\begin{aligned}
+ \frac{\EX[g_i(S_{1i})-g_i(S_{0i})]}
+{\EX[S_{1i} - S_{0i}]} 
+& =\frac{\EX[\rho_1(S_{1i} - S_{0i}) - \rho_2(S_{1i}^2 - S_{0i}^2)]}{\EX[S_{1i} - S_{0i}]}  \\
+& =\frac{\EX[(S_{1i} - S_{0i})(\rho_1 + \rho_2(S_{1i} - S_{0i}))]}
+{\EX[S_{1i} - S_{0i}]}
+\end{aligned}
+\end{equation}
+
+\item
+This weighted averaging property of IV has been said to explain why IV estimates tend to exceed the corresponding OLS estimates. Lang (1993) called the IV>OLS pattern of empirical findings “discount rate bias”. Why is this pattern reasonably called “bias” and what does it have to do with discount
+rates?
+
+The expression in (39) seems to be a a weighted average of individual slopes at the midpoint of the interval $[S_{0i}, S_{1i}]$ for each person.
+The fact that the weights are proportional to  $S_{1i} - S_{0i}$ sometimes has economic significance. For Lang (1993) the first-stage effect is assumed to be proportional to individual discount rates.
+He propose that the natural candidate for IV could be the discount rate since is not correlated to ability. then $s = (a,r) $ , but we can invert the schooling equation to get innate ability as a function of schooling and discount rate  $i=(s,r)$. Even if innate ability and the discount rate are uncorrelated they are correlated on we condition on the level of schooling. , which means for a given level of schooling , individuals with higher discount rates have more innate ability. Then the human capital production function is $q(s,i(s,r) = q^*(s,r)$. Therefore if we regress the log wage on schooling alone, the error term contains the discount rate as one of its component. Since higher discount rates lower attained schooling, this component is correlated with education which introduces a negative bias.That is the reason why  IV>OLS.
+Therefore, since people with higher discount rates get less schooling and the schooling-earnings relationship has been assumed to be concave this tends to make the Wald estimate higher than the population average return. 
+
+\item
+Card (2001) considers the evidence for discount rate bias. What does he look at? Are there alternative explanations for the pattern of empirical findings that Card describes?
+
+He proposes that the the probability limit of the IV
+estimator is 
+
+\begin{equation}
+\begin{aligned}
+plim b_{iv} = \bar{\beta} + [{\sigma_{\eta}^2k_1/k + \sigma_{b\eta}(1-k_1/k)}]/\Bar{r} 
+\end{aligned}
+\end{equation}
+
+If individuals with higher return to schooling have lower discount rates, then $\sigma_{b\eta}\leq0$ and the IV estimator maybe positively or negatively biased relative to $\bar{\beta}$, which represents the "discount rate bias".
+He presents a table which include OLS and IV estimates of the return to education with instruments based on features of the school system from 1991 to 1999. This table shows that IV  estimates return to schooling typically exceed the corresponding OLS estimates, often by 20 percent or more. Since OLS lead to upward-biased estimates of the true causal effect, the even larger IV present an issue that needs to be explained. 
+There are some other explanations for this puzzle. First, ability biases in the OLS estimates of the return to schooling are relative small and the gap between IV-OLS reflect downward bias in the OLS estimates attributable to measurement errors. 
+Second, IV are even further upward biased than OLS by unobserved differences between the characteristics of the treatment and comparison groups implicit in the IV scheme. 
+Third, the "specification searching" in comparing alternative IV specifications , researchers tend to favor those that yield a higher t statistic for the estimated return to schooling. 
+Finally, there is underlying heterogeneity in the returns to education and that many of the IV estimates based on supply-side innovations tend to recover returns to education for a subset of individuals with relatively high return to education. 
+
+
+\end{enumerate}

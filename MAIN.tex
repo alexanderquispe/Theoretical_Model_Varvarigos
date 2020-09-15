@@ -1,0 +1,111 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%DDATA TASK REPORT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\documentclass[12pt]{report}
+
+\usepackage[a4paper]{geometry}
+\usepackage[myheadings]{fullpage}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{adjustbox}
+\usepackage{amsmath,upgreek,bm}
+\usepackage{physics}
+\usepackage{lastpage}
+\usepackage{graphicx, wrapfig, subcaption, setspace, booktabs}
+\newcommand{\citeColored}[2]{{\hypersetup{citecolor=#1}\cite{#2}}}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[font=small, labelfont=bf]{caption}
+\usepackage{fourier}
+\usepackage[protrusion=true, expansion=true]{microtype}
+\usepackage[english]{babel}
+\usepackage{sectsty}
+\usepackage{url, lipsum}
+\usepackage{tgbonum}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{threeparttable}
+\usepackage[utf8]{inputenc}
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}
+\onehalfspacing
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+\usepackage{enumitem}
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage{amsmath}
+\DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}1}}
+\DeclareMathOperator{\EX}{\mathbb{E}}% expected value
+
+\usepackage{graphicx}
+
+\usepackage{xspace} 
+\usepackage{multirow}
+\usepackage{amsmath,amssymb}
+\DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}1}}
+\usepackage{blindtext}
+\usepackage[flushleft]{threeparttable}
+\usepackage{booktabs, caption, makecell}
+\usepackage{chngcntr}
+\counterwithin{table}{section}
+%-------------------------------------------------------------------------------
+% TITLE PAGE : 
+%-------------------------------------------------------------------------------
+
+\begin{document}
+{\fontfamily{cmr}\selectfont
+\title{ \normalsize \textsc{}
+		\\ [2cm]
+		\HRule{0.5pt} \\
+		\LARGE \textbf{\uppercase{Fertility and Education Patterns Across Different Phases of Development}
+		\HRule{2pt} \\ [0.5cm]
+		\normalsize  \vspace*{5\baselineskip}}
+		}
+
+\date{September 2nd, 2020}
+
+\author{
+		Alexander Quispe Rojas \\ 
+		}
+
+\maketitle
+\tableofcontents
+\newpage
+
+%-------------------------------------------------------------------------------
+% Section title formatting
+\sectionfont{\scshape}
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+% BODY
+%-------------------------------------------------------------------------------
+
+\section{Theoretical Model}
+\input{STEP1.tex}
+%\newpage
+%\section{Getting Started}
+%\input{getstart.tex}
+
+% \section{Question 2}
+% \input{STEP2.tex}
+
+%\section{Question 1}
+%\input{STEP3.tex}
+
+% \section{Question 4}
+% \input{STEP4.tex}
+
+%\section{Question 5}
+%\input{STEP5.tex}
+
+%\section{Question 6}
+%\input{STEP6.tex}
+
+\end{document}

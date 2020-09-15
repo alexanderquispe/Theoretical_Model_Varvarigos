@@ -1,0 +1,171 @@
+%\begin{enumerate}[label=(\alph*)]
+
+
+Consider the constant elasticity of substitution (CES) production function
+
+    \begin{equation}
+    \begin{aligned}
+    F(K,L) = (\alpha K^{\rho} + (1-\alpha)L^{\rho})^{1/\rho}
+    \end{aligned}
+    \end{equation}
+with $\rho \in (-\infty,1]$ and $ \alpha \in (0,1)$.
+
+\begin{itemize}
+\item 
+CES is CRTS
+
+    \begin{equation}
+    \begin{aligned}
+    F(\lambda K,\lambda L) = (\alpha (\lambda K)^{\rho} + (1-\alpha)(\lambda L)^{\rho})^{1/\rho} \\
+    F(\lambda K,\lambda L) = (\lambda^{\rho}(\alpha (K)^{\rho} + (1-\alpha)(L)^{\rho}))^{1/\rho} \\
+    F(\lambda K,\lambda L) = \lambda(\alpha (K)^{\rho} + (1-\alpha)(L)^{\rho})^{1/\rho} 
+    \end{aligned}
+    \end{equation}
+
+\item 
+Derive conditional factor demands $(K^{c},L^{c})$ and the CES cost function.
+From FOC we have ,
+
+    \begin{equation}
+    \begin{aligned}
+        & F_{L} = \frac{1}{\rho}(\alpha K^{\rho} + (1-\alpha)L^{\rho})^{(1/\rho)-1}[(1-\alpha) \rho L^{\rho-1}] = w \\
+        & F_{K} = \frac{1}{\rho}(\alpha K^{\rho} + (1-\alpha)L^{\rho})^{(1/\rho)-1}[\alpha \rho K^{\rho-1}] = r \\
+        & \frac{F_{L}}{F_{K}} = \frac{(1-\alpha)L^{\rho-1}}{(\alpha)K^{\rho-1}}=\frac{w}{r} \\
+        & K = (\frac{\alpha}{1-\alpha}\frac{w}{r})^{\frac{1}{1-\rho}}L  ;\  
+        L = (\frac{r}{\alpha})^{\frac{-1}{\rho-1}}
+        (\frac{w}{1-\alpha})^{\frac{1}{\rho-1}}K
+    \end{aligned}
+    \end{equation}
+
+So we need to plug the last equation in the Production function for a level $F(K,L)=\bar{q}$.
+
+    \begin{equation}
+    \begin{aligned}
+    F(K,L) =\bar{q} =(\alpha K^{\rho} + (1-\alpha)[(\frac{r}{\alpha})^{\frac{-1}{\rho-1}}
+        (\frac{w}{1-\alpha})^{\frac{1}{\rho-1}}K]^{\rho})^{1/\rho}
+    \end{aligned}
+    \end{equation}
+
+with this equation we can find the conditional demand of capital and then using the optimal condition in (7) to find the Labor demand. 
+
+    \begin{equation}
+    \begin{aligned}
+    K^{c}=\frac{\bar{q}(\frac{r}{\alpha})^{\frac{1}{\rho-1}}}
+        {[\alpha(\frac{r}{\alpha})^{\frac{\rho}{\rho-1}}+
+        (1-\alpha)(\frac{w}{1-\alpha})^{\frac{\rho}{\rho-1}}]^{\frac{1}{\rho}}} \\
+    L^{c} =\frac{\bar{q}(\frac{w}{1-\alpha})^{\frac{1}{\rho-1}}}
+        {[\alpha(\frac{r}{\alpha})^{\frac{\rho}{\rho-1}}+
+        (1-\alpha)(\frac{w}{1-\alpha})^{\frac{\rho}{\rho-1}}]^{\frac{1}{\rho}}} 
+    \end{aligned}
+    \end{equation}
+
+then we can find the CES cost function
+
+    \begin{equation}
+    \begin{aligned}
+    C(\bar{q}) = r\frac{\bar{q}(\frac{r}{\alpha})^{\frac{1}{\rho-1}}}
+        {[\alpha(\frac{r}{\alpha})^{\frac{\rho}{\rho-1}}+
+        (1-\alpha)(\frac{w}{1-\alpha})^{\frac{\rho}{\rho-1}}]^{\frac{1}{\rho}}} +
+    w\frac{\bar{q}(\frac{w}{1-\alpha})^{\frac{1}{\rho-1}}}
+        {[\alpha(\frac{r}{\alpha})^{\frac{\rho}{\rho-1}}+
+        (1-\alpha)(\frac{w}{1-\alpha})^{\frac{\rho}{\rho-1}}]^{\frac{1}{\rho}}} 
+    \end{aligned}
+    \end{equation}
+
+\item 
+The elasticity of technical substitution for CES production.
+
+    \begin{equation}
+    \begin{aligned}
+    \sigma = \frac{d\ln{K/L}}{d\ln{w/r}} =
+    \frac{d\ln{(\frac{\alpha}{1-\alpha}\frac{w}{r})^{\frac{1}{1-\rho}}}}{d\ln{w/r}}=
+    \frac{\frac{1}{1-\rho}
+    d[{ \ln{\frac{w}{r}} + \ln{\frac{\alpha}{1-\alpha}}]
+    }}{d\ln{w/r}}= \frac{1}{1-\rho}
+    \end{aligned}
+    \end{equation}
+
+\item 
+CES function might become into different functions depending on the values of $\rho$.
+When $\rho = 1$ then we have the linear function. 
+
+    \begin{equation}
+    \begin{aligned}
+    F(K,L) = \alpha K + (1-\alpha)L
+    \end{aligned}
+    \end{equation}
+
+When $\rho = 0$ then we get the Cobb–Douglas production function. To prove this first we need to take ln of F(K,L) ,
+
+    \begin{equation}
+    \begin{aligned}
+    \ln{F(K,L)} = \frac{1}{\rho} \ln((\alpha k^{\rho} + (1-\alpha)L^{\rho}))
+    \end{aligned}
+    \end{equation}
+
+We need to use l'Hôpital's rule to show the convergence to the Cobb-Douglas function when $\lim_{\rho\to 0}\ln{F(K,L)}$ and we can use the continuity properties from the production function. 
+
+    \begin{equation}
+    \begin{aligned}
+        \lim_{\rho\to 0}\ln{F(K,L)} 
+        & = \lim_{\rho\to 0} \frac{\frac{1}{\alpha k^{\rho} + (1-\alpha)L^{\rho}}
+        [\alpha k^{\rho}\ln{K} + (1-\alpha)L^{\rho}\ln{L}]}{1} \\
+        & = \alpha \ln{K} + (1-\alpha) \ln{L} \\
+        &  =  \ln(K^{\alpha}L^{(1-\alpha)}) \Longrightarrow {F(K,L)} = K^{\alpha}L^{(1-\alpha)}
+    \end{aligned}
+    \end{equation}
+
+When $\lim_{\rho \to -\infty}$ then we get the $\min{(K, L)}$ production function.
+This exercise is similar to do $\lim_{\rho \to \infty}F(K,L,-\rho)$ where 
+
+    \begin{equation}
+    \begin{aligned}
+    F(K,L,-p) = \frac{1}{(\alpha \frac{1}{K^{\rho}} + (1-\alpha)\frac{1}{L^{\rho}})^{1/\rho}}
+    \end{aligned}
+    \end{equation}
+
+Let´s propose the next function 
+    \begin{equation}
+    \begin{aligned}
+    U(K,L) = (\alpha \frac{1}{K^{\rho}} + (1-\alpha)\frac{1}{L^{\rho}})^{1/\rho}
+    \end{aligned}
+    \end{equation}
+
+If we assume that $L<K \implies \frac{\alpha}{L^{\rho}} > \frac{\alpha}{K^{\rho}}$ and  $\frac{1-\alpha}{L^{\rho}} \geq  \frac{1-\alpha}{L^{\rho}} \implies 
+\frac{1}{L^{\rho}} \geq  \frac{\alpha}{K^{\rho}} + \frac{1-\alpha}{L^{\rho}}$. \\
+Therefore we conclude that the upper bound of U(K,L) is 
+
+    \begin{equation}
+    \begin{aligned}
+    U(K,L) = (\alpha \frac{1}{K^{\rho}} + (1-\alpha)\frac{1}{L^{\rho}})^{1/\rho} \leq\frac{1}{L} 
+    \end{aligned}
+    \end{equation}
+
+But is also true that 
+    \begin{equation}
+    \begin{aligned}
+    (1-\alpha)^{\frac{1}{\rho}}\frac{1}{L} \leq U(K,L) = (\alpha \frac{1}{K^{\rho}} + (1-\alpha)\frac{1}{L^{\rho}})^{1/\rho} \leq\frac{1}{L} 
+    \end{aligned}
+    \end{equation}
+
+Since we know that $F(K,L,-p) = [U(K,L)]^{-1}$ this implies that 
+    \begin{equation}
+    \begin{aligned}
+     L \leq 
+    F(K,L,-p) = \frac{1}{(\alpha \frac{1}{K^{\rho}} + (1-\alpha)\frac{1}{L^{\rho}})^{1/\rho}} \leq
+    \frac{L}{(1-\alpha)^{\frac{1}{\rho}}}
+    \end{aligned}
+    \end{equation}
+
+Then when we take the  $\lim_{\rho \to \infty}\frac{L}{(1-\alpha)^{\frac{1}{\rho}}}=L$ which sandwiches the middle term in (19) to L. Therefore we have proved that $\lim_{\rho \to -\infty}F(K,L,\rho) = \min{(K, L)}$.
+
+
+
+
+\end{itemize}
+
+
+
+
+
+%\end{enumerate}
