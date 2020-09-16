@@ -1,0 +1,4 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {0.1}Theoretical Model}{2}{section.0.1}%
+\contentsline {subsection}{\numberline {0.1.1}Dynamics}{3}{subsection.0.1.1}%
+\contentsline {subsection}{\numberline {0.1.2}The full dynamical system}{5}{subsection.0.1.2}%
